@@ -1,0 +1,9 @@
+<h2>Rating bar</h2>
+<div>Rate: {{number1}}</div>
+<div class="rating">
+  <table class="border">
+  <td style="border: 1px" *ngFor="let element of rate; index as i "  >
+    <button (click)="changeRate(i)" [style.background-color]="color" >{{i+1}}</button>
+  </td>
+  </table>
+</div>

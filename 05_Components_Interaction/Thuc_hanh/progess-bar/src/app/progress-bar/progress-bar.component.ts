@@ -12,13 +12,14 @@ export class ProgressBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.loading();
   }
   loading() {
-    const interval = setInterval(() => {
+    let interval = setInterval(() => {
       this.progress = +this.progress + 5;
       if (this.progress === 100) {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 500);
   }
 }
