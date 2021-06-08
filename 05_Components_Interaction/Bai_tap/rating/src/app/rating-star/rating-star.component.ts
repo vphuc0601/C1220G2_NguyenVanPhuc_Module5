@@ -24,6 +24,5 @@ export class RatingStarComponent implements OnInit {
   changeRate(index) {
     this.number1= index + 1;
     this.rateChange.emit(this.number1);
-
   }
 }

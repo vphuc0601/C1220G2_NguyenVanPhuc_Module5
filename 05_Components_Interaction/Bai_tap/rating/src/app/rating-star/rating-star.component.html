@@ -3,7 +3,7 @@
 <div class="rating">
   <table class="border">
   <td style="border: 1px" *ngFor="let element of rate; index as i "  >
-    <button (click)="changeRate(i)" [style.background-color]="color" >{{i+1}}</button>
+    <button (click)="changeRate(i)" [style.background-color]="i < number1 ? 'red': 'white'" >{{i+1}}</button>
   </td>
   </table>
 </div>
