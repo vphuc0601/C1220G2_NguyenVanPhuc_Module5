@@ -1,0 +1,94 @@
+
+<div class="container">
+  <h1>Register Form</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="formRegister" >
+  <div class="form-row">
+  <label for="email">Email:</label>
+  <input class="form-control" id="email" type="text" formControlName="email">
+  <p style="color: red"
+        *ngIf="formRegister.controls.email.hasError('required')
+          && formRegister.controls.email.dirty ">
+    Please enter your email.
+  </p>
+  <p style="color: red"
+     *ngIf="formRegister.controls.email.hasError('pattern')
+          && formRegister.controls.email.dirty ">
+    Email incorrect format.
+  </p>
+  </div>
+  <fieldset formGroupName="pwGroup" >
+  <div class="form-row">
+    <label for="password"> Password:</label>
+    <input class="form-control" id="password" type="text" formControlName="password">
+    <p style="color: red"
+        *ngIf="formRegister.controls.password.hasError('required')
+          && formRegister.controls.password.dirty">
+    </p>
+    <p style="color: red"
+       *ngIf="formRegister.controls.password.hasError('minlength')
+          && formRegister.controls.password.dirty">
+    </p>
+
+  </div>
+  <div class="form-row">
+    <label for="cf"> Confirm Password:</label>
+    <input class="form-control" id="cf" type="password" formControlName="confirmPassword" >
+    <div class="alert alert-danger" role="alert"
+         *ngIf="formRegister.hasError('passwordNotMatch', ['pwGroup']) &&
+      formRegister.get('pwGroup').touched">
+      Password does not match!
+    </div>
+  </div>
+  </fieldset>
+  <div class="form-row">
+    Country:
+    <select  formControlName="country" class="form-control">
+      <option value="VN">VN</option>
+      <option value="USA">USA</option>
+      <option value="Campuchia">Campuchia</option>
+    </select>
+  <p style="color: red"
+      *ngIf="formRegister.controls.country.hasError('required')&&formRegister.controls.country.dirty">
+    Please enter country.
+  </p>
+  </div>
+  <div class="form-row">
+    <label for="age"> Age:</label>
+    <input class="form-control" id="age" type="number" formControlName="age">
+
+    <p style="color: red"
+        *ngIf="formRegister.controls.age.hasError('required')&&formRegister.controls.age.dirty">
+      Please enter age.</p>
+    <p style="color: red"
+       *ngIf="formRegister.controls.age.hasError('min')&&formRegister.controls.age.dirty">
+      Age must be > 18.</p>
+  </div>
+  <div class="form-row">
+    Gender:
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Male"  class="custom-control-input" formControlName="gender">
+      <label class="custom-control-label" for="Male">Male</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="Female"  class="custom-control-input" formControlName="gender">
+      <label class="custom-control-label" for="Female">Female</label>
+    </div>
+  </div>
+  <p style="color: red" *ngIf="formRegister.controls.gender.hasError('required')
+        && formRegister.controls.gender.dirty">
+    Please choose gender
+  </p>
+  <div class="form-row">
+   <label for="phone"> Phone: </label>
+    <input class="form-control" id="phone" type="number" formControlName="phone">
+    <p style="color: red"
+        *ngIf="formRegister.controls.phone.hasError('required')&&formRegister.controls.phone.dirty">
+      Please enter your phone.</p>
+    <p style="color: red"
+       *ngIf="formRegister.controls.phone.hasError('pattern')&&formRegister.controls.phone.dirty">
+      Phone invalid.</p>
+  </div>
+  <br>
+  <button class="btn btn-primary">Submit</button>
+</form>
+</div>

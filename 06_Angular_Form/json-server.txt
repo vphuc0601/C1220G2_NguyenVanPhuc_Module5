@@ -1,0 +1,45 @@
+1	npm install json-server --save	
+		
+2	package.json	
+	"scripts": {	
+	  ...	
+	  "json-server": "json-server --watch db.json"	
+	}	
+		
+		
+3	db.json	
+		{
+		  "studentList": [
+		    {
+		      "id": 1,
+		      "name": "Tien",
+		      "dateOfBirth": "2k"
+		    },
+		    {
+		      "id": 2,
+		      "name": "Long",
+		      "dateOfBirth": "1999"
+		    },
+		    {
+		      "id": 3,
+		      "name": "Khanh",
+		      "dateOfBirth": "2k1"
+		    }
+		  ]
+		}
+		
+4	npm run json-server
+		// localhost:3000
+
+----------------------------
+localhost:4200: Angular
+HttpClient
+localhost:3000: API ảo
+
+getAll(): Observable<Student[]> {
+    return this.http.get<IStudent[]>('http://localhost:3000/studentList');
+}
+
+getAll(): Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:3000/productList');
+}
