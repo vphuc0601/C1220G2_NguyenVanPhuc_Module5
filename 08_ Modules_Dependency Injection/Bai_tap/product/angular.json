@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gallery": {
+    "product": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gallery",
+            "outputPath": "dist/product",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gallery:build"
+            "browserTarget": "product:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gallery:build:production"
+              "browserTarget": "product:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gallery:build"
+            "browserTarget": "product:build"
           }
         },
         "test": {
@@ -110,19 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "gallery:serve"
+            "devServerTarget": "product:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "gallery:serve:production"
+              "devServerTarget": "product:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "gallery",
+  "defaultProject": "product",
   "cli": {
-    "analytics": "2f60481c-b72e-4fbc-977e-927507238f3a"
+    "analytics": "56953a8c-3384-4455-87c8-e274832b0fbc"
   }
 }
