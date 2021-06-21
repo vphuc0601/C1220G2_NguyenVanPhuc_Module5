@@ -1,0 +1,42 @@
+<h2>Update Student</h2>
+
+<form [formGroup]="studentForm" (ngSubmit)="updateInfoStudent()">
+  <input type="hidden" formControlName="id">
+  <div>
+    Name:
+    <input type="text" formControlName="name"/>
+  </div>
+  <div>
+    <p style="color: red"
+       *ngIf="studentForm.controls.name.hasError('required')
+              && studentForm.controls.name.dirty">
+      Please input name
+    </p>
+  </div>
+  <div>
+    <p style="color: red"
+       *ngIf="studentForm.controls.name.hasError('pattern')
+              && studentForm.controls.name.dirty">
+      Invalid format name
+    </p>
+  </div>
+  <div>
+    Date of birth:
+    <input type="date" formControlName="dateOfBirth" />
+  </div>
+  <div>
+    <p style="color: red"
+       *ngIf="studentForm.controls.dateOfBirth.hasError('required')
+              && studentForm.controls.dateOfBirth.dirty">
+      Please input date of birth
+    </p>
+    <p style="color: red"
+       *ngIf="studentForm.controls.dateOfBirth.hasError('invalid18')
+              && studentForm.controls.dateOfBirth.dirty">
+      Age not >= 18
+    </p>
+  </div>
+  <div>
+    <input type="submit" value="Update" [disabled]="studentForm.invalid"/>
+  </div>
+</form>

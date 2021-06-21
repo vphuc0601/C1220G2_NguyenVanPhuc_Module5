@@ -1,0 +1,113 @@
+<div class="row" style="margin-top: 130px; position: relative">
+  <div class="container" style="text-align: center" >
+    <h1>Create Employee</h1>
+    <form [formGroup]="employeeForm" (ngSubmit)="submit()">
+      <div class="row">
+        <label for="id">ID :</label>
+        <input class="form-control" id="id" type="text" formControlName="id" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.id.hasError('required') && employeeForm.controls.id.dirty">
+          Please enter ID Employee!
+        </p>
+      </div>
+      <div class="row">
+        <label for="idEmployee">ID Employee:</label>
+        <input class="form-control" id="idEmployee" type="text" formControlName="idEmployee" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.idEmployee.hasError('required') && employeeForm.controls.idEmployee.dirty">
+          Please enter ID Employee!
+        </p>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.idEmployee.hasError('pattern') && employeeForm.controls.idEmployee.dirty">
+          ID Employee format NV-xxxx !
+        </p>
+      </div>
+      <div class="row">
+        <label for="name">Name:</label>
+        <input class="form-control" id="name" type="text" formControlName="name" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.name.hasError('required') && employeeForm.controls.name.dirty">
+          Please enter ID Employee!
+        </p>
+      </div>
+      <div class="row">
+        <label for="birthday">Date of Birth:</label>
+        <input class="form-control" id="birthday" type="date" formControlName="dayOfBirth" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.dayOfBirth.hasError('required') && employeeForm.controls.dayOfBirth.dirty">
+          Please choose Date of birth Employee!
+        </p>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.dayOfBirth.hasError('pattern') && employeeForm.controls.dayOfBirth.dirty">
+          Please enter ID Employee !
+        </p>
+      </div>
+      <div class="row">
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" type="text" formControlName="email" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.email.hasError('required') && employeeForm.controls.email.dirty">
+          Please enter your email !
+        </p>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.email.hasError('pattern') && employeeForm.controls.email.dirty">
+          Email incorrect format !
+        </p>
+      </div>
+      <div class="row">
+        <label for="address">Address:</label>
+        <input class="form-control" id="address" type="text" formControlName="address" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.address.hasError('required') && employeeForm.controls.address.dirty">
+          Please enter your address !
+        </p>
+      </div>
+      <div class="row">
+        <label for="idCard">ID Card:</label>
+        <input class="form-control" id="idCard" type="text" formControlName="idCard" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.idCard.hasError('required') && employeeForm.controls.idCard.dirty">
+          Please enter your ID Card !
+        </p>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.idCard.hasError('maxlength') && employeeForm.controls.idCard.dirty">
+          ID Card must be 10 number !
+        </p>
+      </div>
+      <div class="row">
+        <label for="phone">Phone:</label>
+        <input class="form-control" id="phone" type="text" formControlName="phone" >
+        <p style="color: red"
+           *ngIf="employeeForm.controls.phone.hasError('required') && employeeForm.controls.phone.dirty">
+          Please enter your email !
+        </p>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.phone.hasError('pattern') && employeeForm.controls.phone.dirty">
+          Phone format +84-... !
+        </p>
+      </div>
+      <div class="row">
+        <div>Gender : </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" formControlName="gender">
+          <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="FeMale" formControlName="gender">
+          <label class="form-check-label" for="inlineRadio2">FeMale</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="Other" formControlName="gender">
+          <label class="form-check-label" for="inlineRadio3">Other</label>
+        </div>
+        <p style="color: red"
+           *ngIf="employeeForm.controls.gender.hasError('required')">
+          Please choose your gender !
+        </p>
+      </div>
+      <div class="row" style="text-align: center">
+        <button class="btn btn-outline-success">Create</button>
+      </div>
+    </form>
+  </div>
+</div>

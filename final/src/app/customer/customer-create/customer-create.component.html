@@ -1,0 +1,106 @@
+<div class="row" style="margin-top: 130px; position: relative">
+  <div class="container" style="text-align: center" >
+    <h1>Create Customer</h1>
+    <form focusInvalidInput [formGroup]="customerForm" (ngSubmit)="submit()" *ngIf="customerForm">
+      <div class="row" hidden>
+        <label for="id">ID :</label>
+
+        <input class="form-control" id="id" type="text" formControlName="id" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.id.hasError('required') && customerForm.controls.id.dirty">
+          Please enter ID Customer!
+        </p>
+      </div>
+      <div class="row">
+        <label for="idCustomer">ID Customer:</label>
+        <input class="form-control" id="idCustomer" type="text" formControlName="idCustomer" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.idCustomer.hasError('required') && customerForm.controls.idCustomer.dirty">
+          Please enter ID Customer!
+        </p>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.idCustomer.hasError('pattern') && customerForm.controls.idCustomer.dirty">
+          ID Customer format KH-xxxx !
+        </p>
+      </div>
+      <div class="row">
+        <label for="name">Name:</label>
+        <input class="form-control" id="name" type="text" formControlName="name" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.name.hasError('required') && customerForm.controls.name.dirty">
+          Please enter ID Customer!
+        </p>
+      </div>
+      <div class="row">
+        <label for="birthday">Date of Birth:</label>
+        <input class="form-control" id="birthday" type="date" formControlName="dateOfBirth" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.dateOfBirth.hasError('required') && customerForm.controls.dateOfBirth.dirty">
+          Please choose Date of birth Customer!
+        </p>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.dateOfBirth.hasError('invalid18') && customerForm.controls.dateOfBirth.dirty">
+          Birthday must be > 18 age!
+        </p>
+      </div>
+      <div class="row">
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" type="text" formControlName="email" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.email.hasError('required') && customerForm.controls.email.dirty">
+          Please enter your email !
+        </p>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.email.hasError('pattern') && customerForm.controls.email.dirty">
+          Email incorrect format !
+        </p>
+      </div>
+      <div class="row">
+        <label for="address">Address:</label>
+        <input class="form-control" id="address" type="text" formControlName="address" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.address.hasError('required') && customerForm.controls.address.dirty">
+          Please enter your address !
+        </p>
+      </div>
+      <div class="row">
+        <label for="idCard">ID Card:</label>
+        <input class="form-control" id="idCard" type="text" formControlName="idCard" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.idCard.hasError('required') && customerForm.controls.idCard.dirty">
+          Please enter your ID Card !
+        </p>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.idCard.hasError('maxlength') && customerForm.controls.idCard.dirty">
+          ID Card must be 10 number !
+        </p>
+      </div>
+      <div class="row">
+        <label for="phone">Phone:</label>
+        <input class="form-control" id="phone" type="text" formControlName="phone" >
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.phone.hasError('required') && customerForm.controls.phone.dirty">
+          Please enter your email !
+        </p>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.phone.hasError('pattern') && customerForm.controls.phone.dirty">
+          Phone format +84-... !
+        </p>
+      </div>
+      <div class="row">
+        <label for="customerType">Customer Type: </label>
+        <select id="customerType" formControlName="typeCustomer" class="form-control">
+          <option value="" disabled>---Select Type Customer---</option>
+          <option *ngFor="let typeCustomer of typeCustomerList" [ngValue]="typeCustomer.id">{{typeCustomer.name}}</option>
+        </select>
+        <p class="small text-danger"
+           *ngIf="customerForm.controls.typeCustomer.hasError('required') && customerForm.controls.typeCustomer.touched">
+          Please choose your gender !
+        </p>
+      </div>
+      <div class="row" style="text-align: center">
+        <button class="btn btn-outline-success"  >Create</button>
+      </div>
+    </form>
+  </div>
+</div>

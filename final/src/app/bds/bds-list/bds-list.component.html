@@ -1,0 +1,77 @@
+<!--<script src="../../model/bds.ts"></script>-->
+<div class="row" style="margin-top: 130px; position: relative">
+  <div class="container-fluid" style="text-align: center" >
+    <h1>BDS LIST</h1>
+    <button class="btn btn-outline-success btn-sm w-25" routerLink="/bds/create"><i class="fas fa-plus-square"></i>CREATE</button>
+    <br>
+    <div class="container" style="margin-left: 800px">
+      <form class="form-inline my-2 my-lg-0" *ngIf="bdsForm" [formGroup]="bdsForm" (ngSubmit)="searchBds()">
+        <input class="form-control mr-sm-2" type="search" formControlName="dienTich" placeholder="dienTich" ><br>
+        <input  class="form-control mr-sm-2" type="search" formControlName="gia" placeholder="gia" ><br>
+        <input  class="form-control mr-sm-2" type="search" formControlName="huong" placeholder="huong" ><br>
+        <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+      </form>
+    </div>
+    <br>
+    <table class="table table-striped table-active table-bordered ">
+      <thead >
+      <tr style="text-align: center">
+        <td scope="col">STT</td>
+        <td scope="col">Tiêu đề</td>
+        <td scope="col">Loại bài viết</td>
+        <td scope="col">Danh mục</td>
+        <td scope="col">Ngày đăng</td>
+        <td scope="col">Trạng thái</td>
+        <td scope="col">Action</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let bds of bdsList| slice: (page-1) * pageSize : page * pageSize, index as i" style="text-align: center">
+        <td scope="col">{{i + 1}}</td>
+        <td scope="col">{{bds.tuaDe}}</td>
+        <td scope="col">{{bds.banDangTin}}</td>
+        <td scope="col">{{bds.danhMuc}}</td>
+        <td scope="col">{{bds.ngayDang}}</td>
+        <td scope="col">{{bds.tinhTrang}}</td>
+<!--        <ng-container *ngFor="let customerType of customerType; index as i">-->
+<!--          <td *ngIf="customerType.id == customer.typeCustomer">-->
+<!--            {{customerType.name}}-->
+<!--          </td>-->
+<!--        </ng-container>-->
+        <td scope="col-span 2">
+          <button class="btn btn-outline-warning" [routerLink]="['/bds/update',bds.id]"><i class="fas fa-edit"></i></button>
+<!--          <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal" (click)="sendId(bds.id)" >-->
+<!--            <i class="fas fa-trash"></i></button>-->
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <ngb-pagination class="d-flex justify-content-center"
+                    [(page)]="page"
+                    [pageSize]="pageSize"
+                    [collectionSize]="bdsList.length"></ngb-pagination>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        Are you want to delete <span style="color: red">{{name}}</span>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteCustomer()">Delete</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+

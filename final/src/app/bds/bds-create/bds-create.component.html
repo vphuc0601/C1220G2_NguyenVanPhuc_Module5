@@ -1,0 +1,127 @@
+<div class="row" style="margin-top: 130px; position: relative">
+  <div class="container" style="text-align: center" >
+    <h1>Create Bds</h1>
+    <form focusInvalidInput [formGroup]="bdsForm" (ngSubmit)="submit()" *ngIf="bdsForm">
+      <div class="row" hidden>
+        <label for="id">ID :</label>
+        <input class="form-control" id="id" type="text" formControlName="id" >
+        <p class="small text-danger"
+           *ngIf="bdsForm.controls.id.hasError('required') && bdsForm.controls.id.dirty">
+          Please enter ID Customer!
+        </p>
+      </div>
+      <div class="row">
+        <label for="danhMuc">Danh mục:</label>
+        <input class="form-control" id="danhMuc" type="text" formControlName="danhMuc" >
+      </div>
+      <div class="row">
+        <label for="vungMien">Vùng miền:</label>
+        <input class="form-control" id="vungMien" type="text" formControlName="vungMien" >
+      </div>
+      <div class="row">
+        <div>Bạn là : </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banLa" id="banLa1" value="Cá nhân" formControlName="banLa">
+          <label class="form-check-label" for="banLa1">Cá nhân</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banLa" id="banLa2" value="Công ty" formControlName="banLa">
+          <label class="form-check-label" for="banLa2">Công ty</label>
+        </div>
+        <p style="color: red"
+           *ngIf="bdsForm.controls.banLa.hasError('required') && bdsForm.controls.banLa.touched">
+          Please choose !
+        </p>
+      </div>
+      <div class="row">
+        <div>Bạn đăng tin : </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banDangTin" id="banDangTin1" value="Cần bán" formControlName="banDangTin">
+          <label class="form-check-label" for="banDangTin1">Cần bán</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banDangTin" id="banDangTin2" value="Cần mua" formControlName="banDangTin">
+          <label class="form-check-label" for="banDangTin2">Cần mua</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banDangTin" id="banDangTin3" value="Cho thuê" formControlName="banDangTin">
+          <label class="form-check-label" for="banDangTin3">Cho thuê</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="banDangTin" id="banDangTin4" value="Cần thuê" formControlName="banDangTin">
+          <label class="form-check-label" for="banDangTin4">Cần thuê</label>
+        </div>
+        <p style="color: red"
+           *ngIf="bdsForm.controls.banDangTin.hasError('required') && bdsForm.controls.banDangTin.touched">
+          Please choose !
+        </p>
+      </div>
+      <div class="row">
+        <div>Tình trạng : </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tinhTrang" id="tinhTrang1" value="Mới" formControlName="tinhTrang">
+          <label class="form-check-label" for="tinhTrang1">Mới</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="tinhTrang" id="tinhTrang2" value="Đã sử dụng" formControlName="tinhTrang">
+          <label class="form-check-label" for="tinhTrang2">Đã sử dụng</label>
+        </div>
+        <p style="color: red"
+           *ngIf="bdsForm.controls.tinhTrang.hasError('required') && bdsForm.controls.tinhTrang.touched">
+          Please choose !
+        </p>
+      </div>
+      <div class="row">
+        <label for="diaChi">Địa chỉ:</label>
+        <input class="form-control" id="diachi" type="text" formControlName="diaChi" >
+        <p class="small text-danger"
+           *ngIf="bdsForm.controls.diaChi.hasError('required') && bdsForm.controls.diaChi.dirty">
+          Please enter your address !
+        </p>
+      </div>
+      <div class="row">
+        <label for="dienTich">Diện tích:</label>
+        <input class="form-control" id="dienTich" type="number" formControlName="dienTich" >
+        <p class="small text-danger"
+           *ngIf="bdsForm.controls.dienTich.hasError('required') && bdsForm.controls.dienTich.touched">
+          Please enter your diện tích !
+        </p>
+        <p class="small text-danger"
+          *ngIf="bdsForm.controls.dienTich.hasError('min') && bdsForm.controls.dienTich.touched">Diện tích phải lớn hơn 20!</p>
+      </div>
+      <div class="row">
+        <label for="huong">Hướng:</label>
+        <input class="form-control" id="huong" type="text" formControlName="huong" >
+        <p class="small text-danger"
+           *ngIf="bdsForm.controls.huong.hasError('required') && bdsForm.controls.huong.dirty">
+          Please enter ID hướng!
+        </p>
+      </div>
+      <div class="row">
+        <label for="tuaDe">Tựa đề:</label>
+        <input class="form-control" id="tuaDe" type="text" formControlName="tuaDe" >
+      </div>
+      <div class="row">
+        <label for="noiDung">Nội dung:</label>
+        <textarea class="form-control" id="noiDung"  formControlName="noiDung" ></textarea>
+      </div>
+      <p class="small text-danger"
+         *ngIf="bdsForm.controls.noiDung.hasError('required') && bdsForm.controls.noiDung.touched">
+        Please enter nội dung!
+      </p>
+      <div class="row">
+        <label for="gia">Giá:</label>
+        <input class="form-control" id="gia" type="number" formControlName="gia" >
+        <p class="small text-danger"
+           *ngIf="bdsForm.controls.gia.hasError('required') && bdsForm.controls.gia.touched">
+          Please enter ID Giá!
+        </p>
+        <p class="small text-danger"
+        *ngIf="bdsForm.controls.gia.hasError('min') && bdsForm.controls.gia.touched" > Giá phải lớn hơn 100000000VNĐ</p>
+      </div>
+      <div class="row" style="text-align: center">
+        <button class="btn btn-outline-success" [disabled]="bdsForm.invalid"   >Create</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,190 @@
+{
+  "customerList": [
+    {
+      "id": 4,
+      "idCustomer": "KH-0004",
+      "name": "Hoang Dương ",
+      "dateOfBirth": "1993-06-07",
+      "email": "duong@gmail.com",
+      "address": "QN",
+      "idCard": "123456789",
+      "phone": "+84945345987",
+      "typeCustomer": 3
+    },
+    {
+      "id": 5,
+      "idCustomer": "KH-2222",
+      "name": "Khoa",
+      "dateOfBirth": "1990-01-30",
+      "email": "khoa@gmail.com",
+      "address": "Huế",
+      "idCard": "1234567899",
+      "phone": "+84945986378",
+      "typeCustomer": 2
+    },
+    {
+      "id": 6,
+      "idCustomer": "KH-1111",
+      "name": "Giang",
+      "dateOfBirth": "1982-06-09",
+      "email": "giang@gmail.com",
+      "address": "Hue",
+      "idCard": "1234567899",
+      "phone": "+84981234567",
+      "typeCustomer": 3
+    },
+    {
+      "id": 7,
+      "idCustomer": "KH-1114",
+      "name": "son",
+      "dateOfBirth": "2000-01-31",
+      "email": "son123@gmail.com",
+      "address": "HCM",
+      "idCard": "0943423453",
+      "phone": "+84123412343",
+      "typeCustomer": 2
+    },
+    {
+      "id": 8,
+      "idCustomer": "KH-1114",
+      "name": "Phúc",
+      "dateOfBirth": "2021-06-16",
+      "email": "son@gmail.com",
+      "address": "Da Nang",
+      "idCard": "123123123",
+      "phone": "+84333534536",
+      "typeCustomer": 2
+    },
+    {
+      "id": 9,
+      "idCustomer": "KH-1114",
+      "name": "Tấn Tài",
+      "dateOfBirth": "2002-06-03",
+      "email": "tai@gmail.com",
+      "address": "HCM",
+      "idCard": "1231212312",
+      "phone": "+84945986378",
+      "typeCustomer": 1
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Platinium"
+    },
+    {
+      "id": 2,
+      "name": "Diamond"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    }
+  ],
+  "bdsList": [
+    {
+      "id": 1,
+      "danhMuc": "Nhà đất",
+      "vungMien": "Hà Nội",
+      "banLa": "Cá nhân",
+      "banDangTin": "Cần bán",
+      "tinhTrang": "Mới",
+      "diachi": "Cổ Nhuế, Hà Nội",
+      "dienTich": 64,
+      "huong": "Đông",
+      "tuaDe": "Cần bán ...",
+      "noiDung": "Nhà nhỏ cấp 4, sổ đỏ chính chủ",
+      "gia": 20000000,
+      "ngayDang": "2021-06-12"
+    },
+    {
+      "id": 2,
+      "danhMuc": "Nhà Đất",
+      "vungMien": "HCM",
+      "banLa": "Công ty",
+      "banDangTin": "Cần mua",
+      "tinhTrang": "Đã sử dụng",
+      "diaChi": "Quận 1, HCM",
+      "dienTich": 103,
+      "huong": "Nam",
+      "tuaDe": "Cần bán ABC",
+      "noiDung": "ABCXZC",
+      "gia": 500000000
+    },
+    {
+      "id": 3,
+      "danhMuc": "Nhà Đất123",
+      "vungMien": "HCM",
+      "banLa": "Công ty",
+      "banDangTin": "Cần mua",
+      "tinhTrang": "Đã sử dụng",
+      "diaChi": "dadasda",
+      "dienTich": 30,
+      "huong": "dasdasda",
+      "tuaDe": "dasdada",
+      "noiDung": "afasda",
+      "gia": 200000045,
+      "ngayDang": ""
+    },
+    {
+      "id": 4,
+      "danhMuc": "Nhà Đất123324",
+      "vungMien": "qweqweqw",
+      "banLa": "Công ty",
+      "banDangTin": "Cần mua",
+      "tinhTrang": "Đã sử dụng",
+      "diaChi": "eqweqweqw",
+      "dienTich": 47,
+      "huong": "Nam",
+      "tuaDe": "asdasdas",
+      "noiDung": "asdasdasda",
+      "gia": 7000055555,
+      "ngayDang": ""
+    },
+    {
+      "id": 5,
+      "danhMuc": "Văn phòng",
+      "vungMien": "Đà Nẵng",
+      "banLa": "Công ty",
+      "banDangTin": "Cần mua",
+      "tinhTrang": "Mới",
+      "diaChi": "Quận Hải Châu",
+      "dienTich": 100,
+      "huong": "Bắc",
+      "tuaDe": "Văn phòng cho thuê",
+      "noiDung": "Tòa nhà Vincom Park.Cod....",
+      "gia": 499999999,
+      "ngayDang": ""
+    },
+    {
+      "id": 6,
+      "danhMuc": "QEQEQ",
+      "vungMien": "12312",
+      "banLa": "Cá nhân",
+      "banDangTin": "Cần thuê",
+      "tinhTrang": "Đã sử dụng",
+      "diaChi": "EQEQE",
+      "dienTich": 1212,
+      "huong": "EQEQQ",
+      "tuaDe": "EQWEQEQ",
+      "noiDung": "QEQWEQWEQ",
+      "gia": 200000004,
+      "ngayDang": ""
+    },
+    {
+      "id": 7,
+      "danhMuc": "1231312",
+      "vungMien": "1231231",
+      "banLa": "Cá nhân",
+      "banDangTin": "Cần mua",
+      "tinhTrang": "Mới",
+      "diaChi": "11231231212",
+      "dienTich": 123,
+      "huong": "QƯEQWEQW",
+      "tuaDe": "QƯEQWEQWE",
+      "noiDung": "QEQEQWEQW",
+      "gia": 32323232232,
+      "ngayDang": ""
+    }
+  ]
+}

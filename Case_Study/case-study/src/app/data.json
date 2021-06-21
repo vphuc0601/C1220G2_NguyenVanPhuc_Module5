@@ -1,0 +1,83 @@
+{
+  "customerList": [
+    {
+      "id": 2,
+      "idCustomer": "KH-0002",
+      "name": "Phan Thành Công",
+      "dayOfBirth": "2000-07-04",
+      "email": "nguyenvanB@gmail.com",
+      "address": "QN",
+      "idCard": "123456789",
+      "phone": "+84923453235",
+      "gender": "FeMale"
+    },
+    {
+      "id": 3,
+      "idCustomer": "KH-0003",
+      "name": "Nguyen Van C",
+      "dayOfBirth": "2000-10-23",
+      "email": "nguyenvanC@gmail.com",
+      "address": "QN",
+      "idCard": "1234567895",
+      "phone": 93345987,
+      "gender": "Male"
+    },
+    {
+      "id": 5,
+      "idCustomer": "KH-1111",
+      "name": "Hoàng Dược Sư",
+      "dayOfBirth": "2021-06-16",
+      "email": "haong@gmail.com",
+      "address": "Hà Nội",
+      "idCard": "1234567899",
+      "phone": "+84234512345",
+      "gender": "FeMale"
+    },
+    {
+      "id": 6,
+      "idCustomer": "KH-1111",
+      "name": "Sang",
+      "dayOfBirth": "2000-01-29",
+      "email": "sang@gmail.com",
+      "address": "Đà Nẵng",
+      "idCard": "1234567899",
+      "phone": "+84432234234",
+      "gender": "FeMale"
+    }
+  ],
+  "employeeList": [
+    {
+      "id": 1,
+      "idEmployee": "NV-0001",
+      "name": "Nguyen Van A",
+      "address": "DN",
+      "email": "nguyenvanA@gmail.com",
+      "dayOfBirth": "04/10/1998",
+      "idCard": "123456789",
+      "phone": 93345987,
+      "salary": 1000
+    },
+    {
+      "id": 2,
+      "idEmployee": "NV-0002",
+      "name": "Nguyen Van B",
+      "address": "QN",
+      "email": "nguyenvanB@gmail.com",
+      "dayOfBirth": "04/10/1998",
+      "idCard": "123456789",
+      "phone": 93345987,
+      "salary": 600
+    },
+    {
+      "id": 3,
+      "idEmployee": "NV-0003",
+      "name": "Nguyen Van C",
+      "address": "QN",
+      "email": "nguyenvanC@gmail.com",
+      "dayOfBirth": "04/10/1998",
+      "idCard": "123456789",
+      "phone": 93345987,
+      "salary": 700
+    }
+  ]
+}
